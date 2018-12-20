@@ -1,6 +1,6 @@
 var angle = 0;
 var amp = 2000;
-var damp = 0.01;
+var damp = 0.1;
 
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
