@@ -1,12 +1,27 @@
+var angle = 0;
+var amp = 2000;
+var phase = 300;
+var increment = 3;
+var slider;
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   frameRate(30);
-  stroke(230, 230, 230);
+  stroke(230);
+  angleMode(DEGREES);
+  noFill();
+
+  slider = createSlider(0, 50, 25);
+  slider.position(50,50);
 }
 
 function draw() {
   background(30,30,30);
-  noFill();
-  bezier(mouseY, 250, 0, mouseX, mouseX, 0, 100, 0);
-  // bezier(250, 250, 0, 100 * sin( random(TWO_PI) ), 100 * sin( random(TWO_PI) ), 0, 100, 0, 0, 0, mouseY, 0);
+  text("Number of beziers", 50, 30);
+  
+  angle += increment;
+
+  for (var i = 0; i < slider.value() ; i++) {
+    bezier(windowWidth/2 + 100, 50, cos(angle) * amp + i * phase , windowHeight, sin(angle) * amp + i * phase , windowWidth, windowWidth/2 - 100, 50);
+  }
 }

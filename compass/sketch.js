@@ -10,14 +10,14 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   frameRate(60);
-  stroke(218,98,83);
-  fill(218,98,83);
+  stroke(230);
+  fill(230);
   angleMode(DEGREES);
   imageMode(CENTER);
 }
 
 function draw() {
-  background(249,225,125);
+  background(30);
 
   translate(windowWidth/2, windowHeight/2);
   rotate(rotationZ);
