@@ -1,8 +1,8 @@
 body {
   font-family: monospace;
   font-size: 12px;
-  background: #EEECDD;
-  color: #303030;
+  background: rgb(30, 30, 30);
+  color: rgb(230, 230, 230);
   display: flex;
   flex-direction: column;
 }
