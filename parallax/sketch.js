@@ -7,7 +7,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight, WEBGL);
+  createCanvas(windowWidth, windowHeight * .6 , WEBGL).parent('canvas-container');
   frameRate(30);
   stroke(230);
   angleMode(DEGREES);
@@ -35,5 +35,5 @@ function draw() {
   translate(rotationY * damp * 3 - 100, rotationX * damp * 3, 50);
   fill(230);
   textSize(80);
-  text('Xофманн', -windowWidth/4, -windowHeight/16);
+  text('Xофманн', -windowWidth/5, -windowHeight/16);
 }
