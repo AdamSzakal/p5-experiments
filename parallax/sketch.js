@@ -1,6 +1,6 @@
 var angle = 0;
 var px_amp = 2;
-var damp = 0.75;
+var damp = 0.5;
 
 function preload() {
   fontRegular = loadFont('walsheim.otf');
