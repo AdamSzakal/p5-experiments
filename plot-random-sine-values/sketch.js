@@ -5,7 +5,8 @@ var margin = 24;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  fill(0, 0, 10, 5);
+  fill(230, 230, 230, 5);
+  background(30);
 }
 
 function draw() {

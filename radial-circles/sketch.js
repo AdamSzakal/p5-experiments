@@ -2,12 +2,12 @@
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
   frameRate(60);
-  stroke(218,98,83, 20);
-  fill(218,98,83);
+  stroke(230);
+  fill(230);
 }
 
 function draw() {
-  background(249,225,125);
+  background(30);
 
   for (var i = 0; i < 6; i++) {
     rotate(PI / 3);
