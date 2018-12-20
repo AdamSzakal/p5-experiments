@@ -35,6 +35,8 @@ function draw() {
   
   strokeWeight(1);
 
+
+  // TODO: Denna skiten nedan
   if (startVal.value() - endVal.value() > 6 && startVal.value() ) {
     curvature = 0;
   } else if (startVal.value() - endVal.value() == 6) {
