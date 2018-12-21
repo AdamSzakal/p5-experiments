@@ -49,16 +49,17 @@ function draw() {
   push();
   stroke(255,0,255,25);
   
-  // Lines showing control points
-  strokeWeight(3);
-  line(pts[startVal.value()].x, pts[startVal.value()].y, pts[startVal.value()].x/2, pts[startVal.value()].y);
-
-  line( pts[[endVal.value()]].x/2, pts[[endVal.value()]].y/2, pts[[endVal.value()]].x, pts[[endVal.value()]].y);
 
   // The curve
   strokeWeight(40);
-  // TODO: measure distance between two points and use that as a amplitude for control points
-  bezier( pts[startVal.value()].x, pts[startVal.value()].y, pts[startVal.value()].x/1.75, pts[startVal.value()].y, pts[[endVal.value()]].x/1.75, pts[[endVal.value()]].y/1.75, pts[[endVal.value()]].x, pts[[endVal.value()]].y);
+
+  beginShape();
+   vertex(pts[startVal.value()].x, pts[startVal.value()].y);
+   quadraticVertex(0, 0, pts[endVal.value()].x, pts[endVal.value()].y); 
+  endShape();
+
+  //
+  // bezier( pts[startVal.value()].x, pts[startVal.value()].y, pts[startVal.value()].x/1.75, pts[startVal.value()].y, pts[[endVal.value()]].x/1.75, pts[[endVal.value()]].y/1.75, pts[[endVal.value()]].x, pts[[endVal.value()]].y);
 
   pop();
 
